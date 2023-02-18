@@ -134,7 +134,6 @@ def BINIM():
     
 def ANIME_GRIL():
     
-
     webbrowser.open ('https://www.youtube.com/watch?v=_v3CJ1x_Fto', new=2)
     
 def COSINUSB():
@@ -249,6 +248,21 @@ def SAFFE():
     innput = text2.get("1.0","end-1c")
     with open('text.txt','w') as fille:
     	fille.write(innput)
+    	
+def OPENN():
+
+
+    global text2
+    linnes = []
+    output = open('text.txt')
+    
+    for line in output:
+    	linnes.append(line)
+    res = ''.join(str(x) for x in linnes)
+    text2.insert(1.0, res)
+    
+    
+    
     
             
 root = Tk()
@@ -318,9 +332,9 @@ Button(root, text="ATAN", width=6, height=2, command=ARCTANGENS).place(x=460,y=5
 
 Button(root, text="ARCTG", width=6, height=2, command=ARCCOTANGENS).place(x=460,y=202)
 
-#Button(root, text="OPEN", width=6, height=2, command=OPEN.place(x=375,y=512)
+Button(root, text="OPEN", width=6, height=2, command=OPENN).place(x=276,y=512)
 
-Button(root, text="SAFE", width=6, height=2, command=lambda: SAFFE()).place(x=375,y=512)
+Button(root, text="SAFE", width=6, height=2, command=lambda: SAFFE()).place(x=460,y=512)
 
 label.pack()
 root.mainloop()
